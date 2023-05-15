@@ -1,2 +1,2 @@
 # core_lib
-Library with base utilities, HTTP client,localization ,share reference ,..... for flutter application
+Library with base utilities, HTTP client with dio,localization ,shared_preferences ,..... for flutter application
