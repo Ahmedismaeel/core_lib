@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:core/core.dart';
+
 import 'package:core/src/global/extensions/device_utils.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +29,7 @@ class CacheImage extends StatelessWidget {
           placeholder: (context, url) => Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(radius),
-                    color: AppColor.neutral,
+                    color: Colors.white,
                     boxShadow: const [
                       BoxShadow(
                           color: Color.fromRGBO(0, 0, 0, 0.10000000149011612),
@@ -47,7 +47,7 @@ class CacheImage extends StatelessWidget {
           errorWidget: (context, url, error) => Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(radius),
-                  color: AppColor.neutral,
+                  color: Colors.white,
                   boxShadow: const [
                     BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.10000000149011612),

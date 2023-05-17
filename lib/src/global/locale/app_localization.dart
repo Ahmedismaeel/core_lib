@@ -73,7 +73,7 @@ class _AppLocalizationsDelegate
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
-translate({required String str, required BuildContext context}) {
+translate(String str,  BuildContext context) {
   return AppLocalizations.of(context).translate(str);
 }
 
