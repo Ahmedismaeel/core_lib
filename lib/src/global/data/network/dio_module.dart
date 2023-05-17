@@ -9,10 +9,10 @@ class NetworkModule {
     final dio = Dio();
     dio
       ..options.baseUrl = SharedPreferenceHelper.instance.baseUrl ?? ""
-      ..options.connectTimeout =
-          const Duration(seconds: Endpoints.connectionTimeout)
-      ..options.receiveTimeout =
-          const Duration(seconds: Endpoints.receiveTimeout)
+      ..options.connectTimeout = Duration(
+          seconds: SharedPreferenceHelper.instance.connectionTimeout ?? 30)
+      ..options.receiveTimeout = Duration(
+          seconds: SharedPreferenceHelper.instance.receiveTimeout ?? 30)
       // ..options.headers = {'Content-Type': 'application/json; charset=utf-8'}
       ..interceptors.add(LogInterceptor(
         request: true,

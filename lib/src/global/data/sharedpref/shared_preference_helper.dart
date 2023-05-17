@@ -33,9 +33,26 @@ class SharedPreferenceHelper {
     return sharedPreference.getString(Preferences.baseUrl);
   }
 
-  Future<bool> saveBaseUrl(String baseUrl) async {
+  int? get connectionTimeout {
+    return sharedPreference.getInt(Preferences.connectionTimeout);
+  }
+
+  int? get receiveTimeout {
+    return sharedPreference.getInt(Preferences.receiveTimeout);
+  }
+
+  Future<bool> saveBaseUrl(
+      String baseUrl, int connectionTimeout, int receiveTimeout) async {
     saveIsLoggedIn(true);
-    return sharedPreference.setString(Preferences.baseUrl, baseUrl);
+    try {
+      await sharedPreference.setString(Preferences.baseUrl, baseUrl);
+      await sharedPreference.setInt(
+          Preferences.connectionTimeout, connectionTimeout);
+      await sharedPreference.setInt(Preferences.receiveTimeout, receiveTimeout);
+      return true;
+    } catch (e) {
+      return false;
+    }
   }
 
   Future<bool> removeAuthToken() async {

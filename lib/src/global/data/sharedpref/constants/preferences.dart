@@ -3,6 +3,9 @@ class Preferences {
   static const String is_logged_in = "isLoggedIn";
   static const String auth_token = "authToken";
   static const String baseUrl = "baseUrl";
+  static const String connectionTimeout = "connectionTimeout";
+
+  static const String receiveTimeout = "receiveTimeout";
   static const String is_dark_mode = "is_dark_mode";
   static const String current_language = "current_language";
   static const String currentCurrency = "current_currency";

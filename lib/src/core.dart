@@ -4,7 +4,7 @@ export './global/helper/list_helper.dart';
 export './global/extensions/extension.dart';
 export './global/data/network/dio_client.dart';
 export './global/data/sharedpref/shared_preference_helper.dart';
-export './global/data/network/constants/endpoints.dart';
+// export './global/data/network/constants/endpoints.dart';
 export './global/data/network/error_handler.dart';
 export './global/status/submit_status.dart';
 export './global/locale/app_localization.dart';
