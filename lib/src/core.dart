@@ -16,3 +16,4 @@ export './global/extensions/device_utils.dart';
 export './global/helper/navigator.dart';
 export './global/extensions/themes.dart';
 export './global/helper/cach_image.dart';
+export './global/helper/text_editor_helper.dart';
