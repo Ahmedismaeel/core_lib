@@ -23,7 +23,9 @@ class NetworkModule {
       ..interceptors.add(
         InterceptorsWrapper(
           onRequest: (RequestOptions options,
-              RequestInterceptorHandler handler) async {
+              RequestInterceptorHandler handler) async {  
+              options.headers
+                .putIfAbsent('Content-Type', () => 'application/json');
             // getting token
             var token = await SharedPreferenceHelper.instance.authToken;
 
